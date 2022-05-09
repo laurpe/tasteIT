@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
+
 import Header from "./Header";
+import Recipe from "./Recipe";
+
 import axios from "axios";
 
 const Recipes = () => {
@@ -25,7 +28,11 @@ const Recipes = () => {
             <div>
                 <ul>
                     {recipes.map((recipe) => {
-                        return <li key={recipe.id}>{recipe.name}</li>;
+                        return (
+                            <li key={recipe.id}>
+                                <Recipe recipe={recipe} />
+                            </li>
+                        );
                     })}
                 </ul>
             </div>

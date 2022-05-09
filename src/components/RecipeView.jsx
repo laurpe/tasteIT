@@ -8,10 +8,14 @@ const RecipeCard = () => {
 
     useEffect(() => {
         const getRecipe = async () => {
-            const response = await axios.get(
-                `http://localhost:3010/recipes/${params.id}`
-            );
-            setRecipe(response.data);
+            try {
+                const response = await axios.get(
+                    `http://localhost:3010/recipes/${params.id}`
+                );
+                setRecipe(response.data);
+            } catch (error) {
+                console.error(error.message);
+            }
         };
         getRecipe();
     }, [params.id]);
