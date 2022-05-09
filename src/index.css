@@ -8,14 +8,15 @@
 
 :root {
     --color-primary: rgb(0, 179, 122);
-    --color-text: rgb(36, 44, 82);
+    --color-text: rgb(8, 50, 59);
     --color-bg: rgb(248, 235, 226);
+    --color-bg-card: rgb(255, 252, 250);
 }
 
 body {
     font-family: "Rubik", sans-serif;
     font-size: 1rem;
-    color: var(--color-bg);
+    color: var(--color-text);
     background-color: var(--color-bg);
 }
 
@@ -38,7 +39,8 @@ nav ul li {
     padding: 0 30px;
 }
 
-a {
+header a,
+h1 {
     color: var(--color-bg);
 }
 
@@ -62,4 +64,24 @@ a {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, #25252591, #00000000);
+}
+
+/* ----- Link cards ----- */
+
+.link-card {
+    background-color: var(--color-bg-card);
+    border-radius: 10px;
+    min-width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 30px;
 }
