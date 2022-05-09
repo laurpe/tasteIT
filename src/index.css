@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: rgb(0, 179, 122);
+    --color-text: rgb(36, 44, 82);
+    --color-bg: rgb(248, 235, 226);
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 1rem;
+    color: var(--color-bg);
+    background-color: var(--color-bg);
+}
+
+/* ----- Header ----- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--color-primary);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 30px;
+}
+
+a {
+    color: var(--color-bg);
+}
+
+/* ----- Hero banner ----- */
+
+#hero-video {
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+}
+
+.hero-banner {
+    position: relative;
+}
+
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #25252591, #00000000);
+}
