@@ -12,11 +12,13 @@ const Home = () => {
                     title="Browse recipes"
                     description="Find all the recipes here"
                     page="/recipes"
+                    linkText="Recipes"
                 />
                 <LinkCard
                     title="Add a recipe"
                     description="Click here to add your own recipe"
                     page="/add_recipe"
+                    linkText="Add recipe"
                 />
             </div>
         </>
