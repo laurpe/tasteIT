@@ -1,6 +1,7 @@
 {
     "recipes": [
         {
+            "id": 1,
             "name": "Finnish pancakes",
             "author": "me",
             "countryCode": "fi",
@@ -17,7 +18,8 @@
             "instructions": "Mix ingredients, make pancakes."
         },
         {
-            "name": "Finnish pancakes",
+            "id": 2,
+            "name": "Finnish pancakes 2",
             "author": "me",
             "countryCode": "fi",
             "description": "This is a description of these nice pancakes.",
@@ -33,7 +35,8 @@
             "instructions": "Mix ingredients, make pancakes."
         },
         {
-            "name": "Finnish pancakes",
+            "id": 3,
+            "name": "Finnish pancakes 3",
             "author": "me",
             "countryCode": "fi",
             "description": "This is a description of these nice pancakes.",
