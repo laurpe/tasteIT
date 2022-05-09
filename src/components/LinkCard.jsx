@@ -1,9 +1,11 @@
-const LinkCard = ({ title, description }) => {
+import { Link } from "react-router-dom";
+
+const LinkCard = ({ title, description, page }) => {
     return (
         <div className="link-card">
             <h2>{title}</h2>
             <p>{description}</p>
-            <a href="/">Link</a>
+            <Link to={page}>Recipes</Link>
         </div>
     );
 };

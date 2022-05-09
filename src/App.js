@@ -1,23 +1,18 @@
-import Header from "./components/Header";
-import HeroBanner from "./components/HeroBanner";
-import LinkCard from "./components/LinkCard";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Home from "./components/Home";
+import Recipes from "./components/Recipes";
+import AddRecipe from "./components/AddRecipe";
 
 const App = () => {
     return (
-        <>
-            <Header />
-            <HeroBanner />
-            <div className="link-cards">
-                <LinkCard
-                    title="Browse recipes"
-                    description="Find all the recipes here"
-                />
-                <LinkCard
-                    title="Add a recipe"
-                    description="Click here to add your own recipe"
-                />
-            </div>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="recipes" element={<Recipes />} />
+                <Route path="add_recipe" element={<AddRecipe />} />
+            </Routes>
+        </BrowserRouter>
     );
 };
 
