@@ -71,6 +71,13 @@ const AddRecipeForm = () => {
         ]);
     };
 
+    const handleRemoveClick = () => {
+        const ingredientsCopy = [...ingredients];
+        ingredientsCopy.pop();
+
+        setIngredients(ingredientsCopy);
+    };
+
     return (
         <form onSubmit={handleSubmit}>
             <div>
@@ -148,7 +155,6 @@ const AddRecipeForm = () => {
                     value={recipe.instructions}
                 />
             </div>
-            INGREDIENT FIELDS
             {ingredients.map((ingredient, index) => {
                 return (
                     <div key={index}>
@@ -175,7 +181,10 @@ const AddRecipeForm = () => {
             })}
             <div>
                 <button type="button" onClick={handleAddMoreClick}>
-                    Add more ingredients
+                    Add more
+                </button>
+                <button type="button" onClick={handleRemoveClick}>
+                    Remove
                 </button>
             </div>
             <div>
