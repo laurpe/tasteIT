@@ -25,16 +25,10 @@ const Recipes = () => {
     return (
         <>
             <Header />
-            <div>
-                <ul>
-                    {recipes.map((recipe) => {
-                        return (
-                            <li key={recipe.id}>
-                                <Recipe recipe={recipe} />
-                            </li>
-                        );
-                    })}
-                </ul>
+            <div className="recipes">
+                {recipes.map((recipe) => {
+                    return <Recipe key={recipe.id} recipe={recipe} />;
+                })}
             </div>
         </>
     );
