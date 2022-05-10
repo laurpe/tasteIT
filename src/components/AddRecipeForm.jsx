@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 const AddRecipeForm = () => {
     const [recipe, setRecipe] = useState({
@@ -46,9 +47,18 @@ const AddRecipeForm = () => {
         );
     };
 
-    const handleSubmit = (event) => {
+    const postRecipe = async (recipe) => {
+        const response = await axios.post(
+            "http://localhost:3010/recipes",
+            recipe
+        );
+        console.log(response.data);
+    };
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
         setFinalRecipe({ ...recipe, ingredients: ingredients });
+        await postRecipe(finalRecipe);
     };
 
     const handleAddMoreClick = () => {
