@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import Header from "./Header";
+
 const RecipeCard = () => {
     const [recipe, setRecipe] = useState({});
     const params = useParams();
@@ -21,10 +23,27 @@ const RecipeCard = () => {
     }, [params.id]);
 
     return (
-        <div className="recipe">
-            <h2>{recipe.name}</h2>
-            <p>{recipe.description}</p>
-        </div>
+        <>
+            <Header />
+            <div className="recipe-single">
+                <img src={recipe.imageUrl} alt={recipe.name} />
+                <h2>
+                    {recipe.name} {recipe.countryCode}
+                </h2>
+                <p>Author: {recipe.author}</p>
+                <p>Servings: {recipe.servings}</p>
+                <p>Ingredients:</p>
+                {recipe.ingredients.map((ingredient) => {
+                    return (
+                        <div className="ingredients">
+                            <span>{ingredient.ingredientName}</span>
+                            <span>{ingredient.quantity}</span>
+                        </div>
+                    );
+                })}
+                <p>{recipe.description}</p>
+            </div>
+        </>
     );
 };
 
