@@ -69,146 +69,164 @@ const AddRecipeForm = () => {
     const handleRemoveClick = () => {
         const ingredientsCopy = [...ingredients];
         ingredientsCopy.pop();
+        //TODO: don't remove if only one field left
 
         setIngredients(ingredientsCopy);
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="name">Name</label>
-            </div>
-            <div>
-                <input
-                    type="text"
-                    name="name"
-                    onChange={handleChange}
-                    value={recipe.name}
-                    required
-                />
-            </div>
-            <div>
-                <label htmlFor="author">Author</label>
-            </div>
-            <div>
-                <input
-                    type="text"
-                    name="author"
-                    onChange={handleChange}
-                    value={recipe.author}
-                    required
-                />
-            </div>
-            <div>
-                <label htmlFor="countryCode">Country</label>
-            </div>
-            <div>
-                <select
-                    name="countryCode"
-                    onChange={handleChange}
-                    value={recipe.countryCode}
-                    required
-                >
-                    <option value="" disabled>
-                        Choose recipe's origin
-                    </option>
-                    {countries
-                        .sort((a, b) =>
-                            a.name.common.localeCompare(b.name.common)
-                        )
-                        .map((country) => {
-                            return (
-                                <option key={country.cca2} value={country.cca2}>
-                                    {country.name.common}
-                                </option>
-                            );
-                        })}
-                </select>
-            </div>
-            <div>
-                <label htmlFor="description">Description</label>
-            </div>
-            <div>
-                <textarea
-                    name="description"
-                    onChange={handleChange}
-                    value={recipe.description}
-                    required
-                />
-            </div>
-            <div>
-                <label htmlFor="imageUrl">Image url</label>
-            </div>
-            <div>
-                <input
-                    type="text"
-                    name="imageUrl"
-                    onChange={handleChange}
-                    value={recipe.imageUrl}
-                    required
-                />
-            </div>
-            <div>
-                <label htmlFor="servings">Servings</label>
-            </div>
-            <div>
-                <input
-                    type="number"
-                    name="servings"
-                    onChange={handleChange}
-                    value={recipe.servings}
-                    required
-                />
-            </div>
-            <div>
-                <label htmlFor="instructions">Instructions</label>
-            </div>
-            <div>
-                <textarea
-                    name="instructions"
-                    onChange={handleChange}
-                    value={recipe.instructions}
-                    required
-                />
-            </div>
-            {ingredients.map((ingredient, index) => {
-                return (
-                    <div key={index}>
-                        <label htmlFor="ingredientName">Ingredient</label>
-                        <input
-                            type="text"
-                            name="ingredientName"
-                            onChange={(event) =>
-                                handleIngredientChange(event, index)
-                            }
-                            value={ingredients[index].ingredientName}
-                            required
-                        />
-                        <label htmlFor="quantity">Quantity</label>
-                        <input
-                            type="text"
-                            name="quantity"
-                            onChange={(event) =>
-                                handleIngredientChange(event, index)
-                            }
-                            value={ingredients[index].quantity}
-                            required
-                        />
-                    </div>
-                );
-            })}
-            <div>
-                <button type="button" onClick={handleAddMoreClick}>
-                    Add more
-                </button>
-                <button type="button" onClick={handleRemoveClick}>
-                    Remove
-                </button>
-            </div>
-            <div>
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+        <div className="add-recipe-container">
+            <form onSubmit={handleSubmit} className="add-recipe-form">
+                <h2>Add recipe</h2>
+                <div>
+                    <label htmlFor="name">Name</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        name="name"
+                        onChange={handleChange}
+                        value={recipe.name}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="author">Author</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        name="author"
+                        onChange={handleChange}
+                        value={recipe.author}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="countryCode">Country</label>
+                </div>
+                <div>
+                    <select
+                        name="countryCode"
+                        onChange={handleChange}
+                        value={recipe.countryCode}
+                        required
+                    >
+                        <option value="" disabled>
+                            Choose recipe's origin
+                        </option>
+                        {countries
+                            .sort((a, b) =>
+                                a.name.common.localeCompare(b.name.common)
+                            )
+                            .map((country) => {
+                                return (
+                                    <option
+                                        key={country.cca2}
+                                        value={country.cca2}
+                                    >
+                                        {country.name.common}
+                                    </option>
+                                );
+                            })}
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="description">Description</label>
+                </div>
+                <div>
+                    <textarea
+                        name="description"
+                        onChange={handleChange}
+                        value={recipe.description}
+                        rows="6"
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="imageUrl">Image url</label>
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        name="imageUrl"
+                        onChange={handleChange}
+                        value={recipe.imageUrl}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="servings">Servings</label>
+                </div>
+                <div>
+                    <input
+                        type="number"
+                        name="servings"
+                        onChange={handleChange}
+                        value={recipe.servings}
+                        required
+                    />
+                </div>
+                {ingredients.map((ingredient, index) => {
+                    return (
+                        <div
+                            key={index}
+                            className="add-recipe-form-ingredients"
+                        >
+                            <div className="form-ingredient-name">
+                                <label htmlFor="ingredientName">
+                                    Ingredient
+                                </label>
+                                <input
+                                    type="text"
+                                    name="ingredientName"
+                                    onChange={(event) =>
+                                        handleIngredientChange(event, index)
+                                    }
+                                    value={ingredients[index].ingredientName}
+                                    required
+                                />
+                            </div>
+                            <div className="form-ingredient-quantity">
+                                <label htmlFor="quantity">Quantity</label>
+                                <input
+                                    type="text"
+                                    name="quantity"
+                                    onChange={(event) =>
+                                        handleIngredientChange(event, index)
+                                    }
+                                    value={ingredients[index].quantity}
+                                    required
+                                />
+                            </div>
+                        </div>
+                    );
+                })}
+                <div>
+                    <button type="button" onClick={handleAddMoreClick}>
+                        Add more
+                    </button>
+                    <button type="button" onClick={handleRemoveClick}>
+                        Remove
+                    </button>
+                </div>
+                <div>
+                    <label htmlFor="instructions">Instructions</label>
+                </div>
+                <div>
+                    <textarea
+                        name="instructions"
+                        onChange={handleChange}
+                        value={recipe.instructions}
+                        rows="8"
+                        required
+                    />
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
     );
 };
 
