@@ -33,23 +33,45 @@ const RecipeCard = () => {
         return (
             <>
                 <Header />
-                <div className="recipe-single">
-                    <img src={recipe.imageUrl} alt={recipe.name} />
-                    <h2>
-                        {recipe.name} {recipe.countryCode}
-                    </h2>
-                    <p>Author: {recipe.author}</p>
-                    <p>Servings: {recipe.servings}</p>
-                    <p>Ingredients:</p>
-                    {recipe.ingredients.map((ingredient, index) => {
-                        return (
-                            <div key={index} className="ingredients">
-                                <span>{ingredient.ingredientName}</span>
-                                <span>{ingredient.quantity}</span>
+                <div className="recipe-view">
+                    <div className="recipe-container">
+                        <img src={recipe.imageUrl} alt={recipe.name} />
+                        <div className="recipe-info">
+                            <h2>
+                                {recipe.name} {recipe.countryCode}
+                            </h2>
+                            <div className="row">
+                                <span className="row-title">Author</span>
+                                <span className="row-content">
+                                    {recipe.author}
+                                </span>
                             </div>
-                        );
-                    })}
-                    <p>{recipe.description}</p>
+                            <div className="row">
+                                <span className="row-title">Servings</span>
+                                <span className="row-content">
+                                    {recipe.servings}
+                                </span>
+                            </div>
+                            <p>{recipe.description}</p>
+                            <h3>Ingredients</h3>
+                            <div className="ingredients">
+                                {recipe.ingredients.map((ingredient, index) => {
+                                    return (
+                                        <div key={index} className="row">
+                                            <div className="row-title">
+                                                {ingredient.quantity}
+                                            </div>
+                                            <div className="row-content">
+                                                {ingredient.ingredientName}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                            <h3>Instructions</h3>
+                            <p>{recipe.instructions}</p>
+                        </div>
+                    </div>
                 </div>
             </>
         );

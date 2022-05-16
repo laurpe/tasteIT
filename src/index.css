@@ -10,6 +10,7 @@
     --color-primary: rgb(0, 179, 143);
     --color-text: rgb(8, 50, 59);
     --color-text-light: rgb(99, 110, 111);
+    --color-light-grey: rgb(190, 199, 199);
     --color-card-header: rgb(48, 66, 68);
     --color-bg: rgb(248, 235, 226);
     --color-bg-card: rgb(255, 252, 250);
@@ -213,3 +214,57 @@ textarea {
 }
 
 /* ----- Single recipe view ----- */
+
+.recipe-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    background-color: var(--color-bg-card);
+    color: var(--color-text-light);
+    margin-top: 30px;
+}
+
+.recipe-container img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.recipe-container p {
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.recipe-container h2 {
+    margin: 20px 0 20px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--color-primary);
+}
+
+.recipe-container h3 {
+    margin-top: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--color-primary);
+}
+
+.recipe-info {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dashed var(--color-light-grey);
+    margin-top: 15px;
+}
