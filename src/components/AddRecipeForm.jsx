@@ -17,18 +17,18 @@ const AddRecipeForm = () => {
             quantity: "",
         },
     ]);
-    // const [countries, setCountries] = useState([]);
 
-    // useEffect(() => {
-    //     const getCountries = async () => {
-    //         const response = await axios.get(
-    //             "https://restcountries.com/v3.1/all"
-    //         );
-    //         setCountries(response.data);
-    //         console.log(countries);
-    //     };
-    //     getCountries();
-    // }, []);
+    const [countries, setCountries] = useState([]);
+
+    useEffect(() => {
+        const getCountries = async () => {
+            const response = await axios.get(
+                "https://restcountries.com/v3.1/all"
+            );
+            setCountries(response.data);
+        };
+        getCountries();
+    }, []);
 
     const handleChange = (event) => {
         setRecipe({ ...recipe, [event.target.name]: event.target.value });
@@ -101,12 +101,24 @@ const AddRecipeForm = () => {
                 <label htmlFor="countryCode">Country</label>
             </div>
             <div>
-                <input
-                    type="text"
+                <select
                     name="countryCode"
                     onChange={handleChange}
                     value={recipe.countryCode}
-                />
+                >
+                    <option defaultValue>Choose recipe's origin</option>
+                    {countries
+                        .sort((a, b) =>
+                            a.name.common.localeCompare(b.name.common)
+                        )
+                        .map((country) => {
+                            return (
+                                <option key={country.cca2} value={country.cca2}>
+                                    {country.name.common}
+                                </option>
+                            );
+                        })}
+                </select>
             </div>
             <div>
                 <label htmlFor="description">Description</label>
