@@ -84,6 +84,7 @@ const AddRecipeForm = () => {
                     name="name"
                     onChange={handleChange}
                     value={recipe.name}
+                    required
                 />
             </div>
             <div>
@@ -95,6 +96,7 @@ const AddRecipeForm = () => {
                     name="author"
                     onChange={handleChange}
                     value={recipe.author}
+                    required
                 />
             </div>
             <div>
@@ -105,8 +107,11 @@ const AddRecipeForm = () => {
                     name="countryCode"
                     onChange={handleChange}
                     value={recipe.countryCode}
+                    required
                 >
-                    <option defaultValue>Choose recipe's origin</option>
+                    <option value="" disabled>
+                        Choose recipe's origin
+                    </option>
                     {countries
                         .sort((a, b) =>
                             a.name.common.localeCompare(b.name.common)
@@ -128,6 +133,7 @@ const AddRecipeForm = () => {
                     name="description"
                     onChange={handleChange}
                     value={recipe.description}
+                    required
                 />
             </div>
             <div>
@@ -139,6 +145,7 @@ const AddRecipeForm = () => {
                     name="imageUrl"
                     onChange={handleChange}
                     value={recipe.imageUrl}
+                    required
                 />
             </div>
             <div>
@@ -150,6 +157,7 @@ const AddRecipeForm = () => {
                     name="servings"
                     onChange={handleChange}
                     value={recipe.servings}
+                    required
                 />
             </div>
             <div>
@@ -160,6 +168,7 @@ const AddRecipeForm = () => {
                     name="instructions"
                     onChange={handleChange}
                     value={recipe.instructions}
+                    required
                 />
             </div>
             {ingredients.map((ingredient, index) => {
@@ -173,6 +182,7 @@ const AddRecipeForm = () => {
                                 handleIngredientChange(event, index)
                             }
                             value={ingredients[index].ingredientName}
+                            required
                         />
                         <label htmlFor="quantity">Quantity</label>
                         <input
@@ -182,6 +192,7 @@ const AddRecipeForm = () => {
                                 handleIngredientChange(event, index)
                             }
                             value={ingredients[index].quantity}
+                            required
                         />
                     </div>
                 );
