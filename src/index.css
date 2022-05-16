@@ -219,6 +219,7 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 30px 0 30px 0;
 }
 
 .recipe-container {
@@ -227,13 +228,15 @@ textarea {
     width: 600px;
     background-color: var(--color-bg-card);
     color: var(--color-text-light);
-    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px;
 }
 
 .recipe-container img {
     width: 600px;
     height: 600px;
     object-fit: cover;
+    border-radius: 10px 10px 0 0;
 }
 
 .recipe-container p {
@@ -266,5 +269,6 @@ textarea {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px dashed var(--color-light-grey);
+    padding-bottom: 3px;
     margin-top: 15px;
 }
