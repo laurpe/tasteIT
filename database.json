@@ -8,11 +8,26 @@
             "description": "This is a description of these nice pancakes.",
             "imageUrl": "https://ruokawiki.fi/wp-content/uploads/2021/08/lettupino.jpg",
             "ingredients": [
-                { "ingredientName": "eggs", "quantity": 3 },
-                { "ingredientName": "milk", "quantity": "6 dl" },
-                { "ingredientName": "flour", "quantity": "4 dl" },
-                { "ingredientName": "salt", "quantity": "0,5 tsp" },
-                { "ingredientName": "oil", "quantity": "2 tbsp" }
+                {
+                    "ingredientName": "eggs",
+                    "quantity": 3
+                },
+                {
+                    "ingredientName": "milk",
+                    "quantity": "6 dl"
+                },
+                {
+                    "ingredientName": "flour",
+                    "quantity": "4 dl"
+                },
+                {
+                    "ingredientName": "salt",
+                    "quantity": "0,5 tsp"
+                },
+                {
+                    "ingredientName": "oil",
+                    "quantity": "2 tbsp"
+                }
             ],
             "servings": 12,
             "instructions": "Mix ingredients, make pancakes."
@@ -25,11 +40,26 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut euismod magna, et semper libero. Vestibulum sed eros faucibus, eleifend dolor eu, pulvinar ante. Pellentesque facilisis, est quis convallis volutpat, enim purus pulvinar nisl, eu venenatis tortor massa at dui. Nulla non facilisis lectus. Cras sit amet nunc vestibulum, dictum mauris vel, scelerisque nisi. Morbi nec magna dictum, pellentesque turpis in, condimentum nisl. Duis facilisis ut neque id sollicitudin. In semper dolor at erat pellentesque, bibendum venenatis neque lacinia. Nunc interdum, dui non fringilla feugiat, est arcu imperdiet lorem, non commodo risus justo et metus. In congue nisl nisi, quis convallis enim tempus suscipit. Cras vulputate sapien a arcu ornare hendrerit. Suspendisse in posuere metus. Nullam tristique leo at luctus molestie. Maecenas sagittis eros a aliquam euismod.",
             "imageUrl": "https://fazeraito.fi/wp-content/uploads/sites/2/2019/05/Perinteiset-letut-1.jpg",
             "ingredients": [
-                { "ingredientName": "eggs", "quantity": 3 },
-                { "ingredientName": "milk", "quantity": "6 dl" },
-                { "ingredientName": "flour", "quantity": "4 dl" },
-                { "ingredientName": "salt", "quantity": "0,5 tsp" },
-                { "ingredientName": "oil", "quantity": "2 tbsp" }
+                {
+                    "ingredientName": "eggs",
+                    "quantity": 3
+                },
+                {
+                    "ingredientName": "milk",
+                    "quantity": "6 dl"
+                },
+                {
+                    "ingredientName": "flour",
+                    "quantity": "4 dl"
+                },
+                {
+                    "ingredientName": "salt",
+                    "quantity": "0,5 tsp"
+                },
+                {
+                    "ingredientName": "oil",
+                    "quantity": "2 tbsp"
+                }
             ],
             "servings": 12,
             "instructions": "Mix ingredients, make pancakes."
@@ -42,11 +72,26 @@
             "description": "This is a description of these nice pancakes.",
             "imageUrl": "https://cdn.valio.fi/mediafiles/61a618fc-cd01-4c6a-920a-697116d1028c/1440x1080-recipe-hero/4x3/aidin-parhaat-letut.jpg",
             "ingredients": [
-                { "ingredientName": "eggs", "quantity": 3 },
-                { "ingredientName": "milk", "quantity": "6 dl" },
-                { "ingredientName": "flour", "quantity": "4 dl" },
-                { "ingredientName": "salt", "quantity": "0,5 tsp" },
-                { "ingredientName": "oil", "quantity": "2 tbsp" }
+                {
+                    "ingredientName": "eggs",
+                    "quantity": 3
+                },
+                {
+                    "ingredientName": "milk",
+                    "quantity": "6 dl"
+                },
+                {
+                    "ingredientName": "flour",
+                    "quantity": "4 dl"
+                },
+                {
+                    "ingredientName": "salt",
+                    "quantity": "0,5 tsp"
+                },
+                {
+                    "ingredientName": "oil",
+                    "quantity": "2 tbsp"
+                }
             ],
             "servings": 12,
             "instructions": "Mix ingredients, make pancakes."
@@ -59,11 +104,26 @@
             "description": "This is a description of these nice pancakes.",
             "imageUrl": "https://images.liquidblox.com/5ac5f866c89bf624d82846d0/5ac5f8c3df76710c014d24c0/originals/85847e199f2d8a980a45c5ae90895be3722df5753ec5a74a600696dcb79ac1f04bc11332746175e459b8fbdee27924e166907a013e292618a43bf3c2349951ea/5c7d34ddcc672d19918dc850_banaaniletut.jpg",
             "ingredients": [
-                { "ingredientName": "eggs", "quantity": 3 },
-                { "ingredientName": "milk", "quantity": "6 dl" },
-                { "ingredientName": "flour", "quantity": "4 dl" },
-                { "ingredientName": "salt", "quantity": "0,5 tsp" },
-                { "ingredientName": "oil", "quantity": "2 tbsp" }
+                {
+                    "ingredientName": "eggs",
+                    "quantity": 3
+                },
+                {
+                    "ingredientName": "milk",
+                    "quantity": "6 dl"
+                },
+                {
+                    "ingredientName": "flour",
+                    "quantity": "4 dl"
+                },
+                {
+                    "ingredientName": "salt",
+                    "quantity": "0,5 tsp"
+                },
+                {
+                    "ingredientName": "oil",
+                    "quantity": "2 tbsp"
+                }
             ],
             "servings": 12,
             "instructions": "Mix ingredients, make pancakes."
@@ -76,11 +136,26 @@
             "description": "This is a description of these nice pancakes.",
             "imageUrl": "https://www.hellapoliisi.fi/wp-content/uploads/2022/03/lettutaikina-low-web-170920_D8S2575-Edit.jpg",
             "ingredients": [
-                { "ingredientName": "eggs", "quantity": 3 },
-                { "ingredientName": "milk", "quantity": "6 dl" },
-                { "ingredientName": "flour", "quantity": "4 dl" },
-                { "ingredientName": "salt", "quantity": "0,5 tsp" },
-                { "ingredientName": "oil", "quantity": "2 tbsp" }
+                {
+                    "ingredientName": "eggs",
+                    "quantity": 3
+                },
+                {
+                    "ingredientName": "milk",
+                    "quantity": "6 dl"
+                },
+                {
+                    "ingredientName": "flour",
+                    "quantity": "4 dl"
+                },
+                {
+                    "ingredientName": "salt",
+                    "quantity": "0,5 tsp"
+                },
+                {
+                    "ingredientName": "oil",
+                    "quantity": "2 tbsp"
+                }
             ],
             "servings": 12,
             "instructions": "Mix ingredients, make pancakes."
@@ -93,11 +168,26 @@
             "description": "This is a description of these nice pancakes.",
             "imageUrl": "https://cdn.valio.fi/mediafiles/7dfc4b47-59da-4b49-827e-32e9aa4dfb5d/1440x1080-recipe-hero/4x3/letut.jpg",
             "ingredients": [
-                { "ingredientName": "eggs", "quantity": 3 },
-                { "ingredientName": "milk", "quantity": "6 dl" },
-                { "ingredientName": "flour", "quantity": "4 dl" },
-                { "ingredientName": "salt", "quantity": "0,5 tsp" },
-                { "ingredientName": "oil", "quantity": "2 tbsp" }
+                {
+                    "ingredientName": "eggs",
+                    "quantity": 3
+                },
+                {
+                    "ingredientName": "milk",
+                    "quantity": "6 dl"
+                },
+                {
+                    "ingredientName": "flour",
+                    "quantity": "4 dl"
+                },
+                {
+                    "ingredientName": "salt",
+                    "quantity": "0,5 tsp"
+                },
+                {
+                    "ingredientName": "oil",
+                    "quantity": "2 tbsp"
+                }
             ],
             "servings": 12,
             "instructions": "Mix ingredients, make pancakes."

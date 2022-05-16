@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const AddRecipeForm = () => {
@@ -17,48 +17,43 @@ const AddRecipeForm = () => {
             quantity: "",
         },
     ]);
-    const [finalRecipe, setFinalRecipe] = useState({});
+    // const [countries, setCountries] = useState([]);
+
+    // useEffect(() => {
+    //     const getCountries = async () => {
+    //         const response = await axios.get(
+    //             "https://restcountries.com/v3.1/all"
+    //         );
+    //         setCountries(response.data);
+    //         console.log(countries);
+    //     };
+    //     getCountries();
+    // }, []);
 
     const handleChange = (event) => {
         setRecipe({ ...recipe, [event.target.name]: event.target.value });
     };
 
-    const handleIngredientNameChange = (event, ingredientIndex) => {
-        const newIngredientName = event.target.value;
+    const handleIngredientChange = (event, ingredientIndex) => {
         setIngredients(
             ingredients.map((ingredient, index) => {
                 if (index === ingredientIndex) {
-                    return { ...ingredient, ingredientName: newIngredientName };
+                    return {
+                        ...ingredient,
+                        [event.target.name]: event.target.value,
+                    };
                 }
                 return ingredient;
             })
         );
-    };
-
-    const handleIngredientQuantityChange = (event, ingredientIndex) => {
-        const newIngredientQuantity = event.target.value;
-        setIngredients(
-            ingredients.map((ingredient, index) => {
-                if (index === ingredientIndex) {
-                    return { ...ingredient, quantity: newIngredientQuantity };
-                }
-                return ingredient;
-            })
-        );
-    };
-
-    const postRecipe = async (recipe) => {
-        const response = await axios.post(
-            "http://localhost:3010/recipes",
-            recipe
-        );
-        console.log(response.data);
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        setFinalRecipe({ ...recipe, ingredients: ingredients });
-        await postRecipe(finalRecipe);
+        await axios.post("http://localhost:3010/recipes", {
+            ...recipe,
+            ingredients: ingredients,
+        });
     };
 
     const handleAddMoreClick = () => {
@@ -163,7 +158,7 @@ const AddRecipeForm = () => {
                             type="text"
                             name="ingredientName"
                             onChange={(event) =>
-                                handleIngredientNameChange(event, index)
+                                handleIngredientChange(event, index)
                             }
                             value={ingredients[index].ingredientName}
                         />
@@ -172,7 +167,7 @@ const AddRecipeForm = () => {
                             type="text"
                             name="quantity"
                             onChange={(event) =>
-                                handleIngredientQuantityChange(event, index)
+                                handleIngredientChange(event, index)
                             }
                             value={ingredients[index].quantity}
                         />
