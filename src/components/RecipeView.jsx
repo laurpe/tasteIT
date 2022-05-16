@@ -35,24 +35,28 @@ const RecipeCard = () => {
                 <Header />
                 <div className="recipe-view">
                     <div className="recipe-container">
-                        <img src={recipe.imageUrl} alt={recipe.name} />
-                        <div className="recipe-info">
-                            <h2>
-                                {recipe.name} {recipe.countryCode}
-                            </h2>
-                            <div className="row">
-                                <span className="row-title">Author</span>
-                                <span className="row-content">
-                                    {recipe.author}
-                                </span>
+                        <div className="recipe-left">
+                            <img src={recipe.imageUrl} alt={recipe.name} />
+                            <div className="recipe-info">
+                                <h2>
+                                    {recipe.name} {recipe.countryCode}
+                                </h2>
+                                <div className="row">
+                                    <span className="row-title">Author</span>
+                                    <span className="row-content">
+                                        {recipe.author}
+                                    </span>
+                                </div>
+                                <div className="row">
+                                    <span className="row-title">Servings</span>
+                                    <span className="row-content">
+                                        {recipe.servings}
+                                    </span>
+                                </div>
+                                <p>{recipe.description}</p>
                             </div>
-                            <div className="row">
-                                <span className="row-title">Servings</span>
-                                <span className="row-content">
-                                    {recipe.servings}
-                                </span>
-                            </div>
-                            <p>{recipe.description}</p>
+                        </div>
+                        <div className="recipe-right">
                             <h3>Ingredients</h3>
                             <div className="ingredients">
                                 {recipe.ingredients.map((ingredient, index) => {

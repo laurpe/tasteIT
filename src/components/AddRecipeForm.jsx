@@ -18,6 +18,8 @@ const AddRecipeForm = () => {
         },
     ]);
 
+    //TODO: add units for nicer recipe view
+
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
@@ -73,6 +75,8 @@ const AddRecipeForm = () => {
 
         setIngredients(ingredientsCopy);
     };
+
+    //TODO: save flag image do recipe here?
 
     return (
         <div className="add-recipe-container">

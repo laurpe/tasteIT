@@ -265,10 +265,25 @@ textarea {
     padding: 20px;
 }
 
+.recipe-right {
+    padding: 20px;
+}
+
 .row {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px dashed var(--color-light-grey);
     padding-bottom: 3px;
     margin-top: 15px;
+}
+
+@media (min-width: 1000px) {
+    .recipe-container {
+        flex-direction: row;
+        width: 1000px;
+    }
+
+    .recipe-container img {
+        border-radius: 10px 0 0 0;
+    }
 }
