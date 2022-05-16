@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import Header from "./Header";
 
 const RecipeCard = () => {
-    const [recipe, setRecipe] = useState({});
+    const [recipe, setRecipe] = useState(null);
     const params = useParams();
 
     useEffect(() => {
@@ -22,29 +22,38 @@ const RecipeCard = () => {
         getRecipe();
     }, [params.id]);
 
-    return (
-        <>
-            <Header />
-            <div className="recipe-single">
-                <img src={recipe.imageUrl} alt={recipe.name} />
-                <h2>
-                    {recipe.name} {recipe.countryCode}
-                </h2>
-                <p>Author: {recipe.author}</p>
-                <p>Servings: {recipe.servings}</p>
-                <p>Ingredients:</p>
-                {recipe.ingredients.map((ingredient) => {
-                    return (
-                        <div className="ingredients">
-                            <span>{ingredient.ingredientName}</span>
-                            <span>{ingredient.quantity}</span>
-                        </div>
-                    );
-                })}
-                <p>{recipe.description}</p>
-            </div>
-        </>
-    );
+    if (!recipe) {
+        return (
+            <>
+                <Header />
+                <p>Loading ...</p>
+            </>
+        );
+    } else {
+        return (
+            <>
+                <Header />
+                <div className="recipe-single">
+                    <img src={recipe.imageUrl} alt={recipe.name} />
+                    <h2>
+                        {recipe.name} {recipe.countryCode}
+                    </h2>
+                    <p>Author: {recipe.author}</p>
+                    <p>Servings: {recipe.servings}</p>
+                    <p>Ingredients:</p>
+                    {recipe.ingredients.map((ingredient, index) => {
+                        return (
+                            <div key={index} className="ingredients">
+                                <span>{ingredient.ingredientName}</span>
+                                <span>{ingredient.quantity}</span>
+                            </div>
+                        );
+                    })}
+                    <p>{recipe.description}</p>
+                </div>
+            </>
+        );
+    }
 };
 
 export default RecipeCard;
