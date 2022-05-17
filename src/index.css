@@ -236,11 +236,17 @@ textarea {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px;
 }
 
-.recipe-container img {
+#recipe-pic {
     width: 600px;
     height: 600px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+}
+
+#flag-pic {
+    height: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px;
+    margin-left: 10px;
 }
 
 .recipe-container p {
@@ -254,6 +260,11 @@ textarea {
     font-weight: 400;
     letter-spacing: 2px;
     color: var(--color-primary);
+}
+
+.recipe-title {
+    display: flex;
+    align-items: center;
 }
 
 .recipe-container h3 {

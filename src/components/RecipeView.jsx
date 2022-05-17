@@ -36,11 +36,20 @@ const RecipeCard = () => {
                 <div className="recipe-view">
                     <div className="recipe-container">
                         <div className="recipe-left">
-                            <img src={recipe.imageUrl} alt={recipe.name} />
+                            <img
+                                id="recipe-pic"
+                                src={recipe.imageUrl}
+                                alt={recipe.name}
+                            />
                             <div className="recipe-info">
-                                <h2>
-                                    {recipe.name} {recipe.countryCode}
-                                </h2>
+                                <div className="recipe-title">
+                                    <h2>{recipe.name}</h2>
+                                    <img
+                                        id="flag-pic"
+                                        src={recipe.flag}
+                                        alt={recipe.countryCode}
+                                    />
+                                </div>
                                 <div className="row">
                                     <span className="row-title">Author</span>
                                     <span className="row-content">

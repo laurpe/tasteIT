@@ -197,23 +197,6 @@
             "servings": 12,
             "instructions": "Mix ingredients, make pancakes.",
             "flag": "https://flagcdn.com/fi.svg"
-        },
-        {
-            "name": "gggg",
-            "author": "gggg",
-            "countryCode": "FI",
-            "description": "gggg",
-            "imageUrl": "ggg",
-            "servings": "4",
-            "instructions": "gggg",
-            "ingredients": [
-                {
-                    "ingredientName": "ggg",
-                    "quantity": "ggg"
-                }
-            ],
-            "flag": "https://flagcdn.com/fi.svg",
-            "id": 15
         }
     ]
 }
