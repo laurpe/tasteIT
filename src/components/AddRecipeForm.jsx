@@ -50,11 +50,19 @@ const AddRecipeForm = () => {
         );
     };
 
+    const getFlag = () => {
+        const country = countries.find(
+            (country) => country.cca2 === recipe.countryCode
+        );
+        return country.flags.svg;
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         await axios.post("http://localhost:3010/recipes", {
             ...recipe,
             ingredients: ingredients,
+            flag: getFlag(),
         });
     };
 
@@ -76,8 +84,6 @@ const AddRecipeForm = () => {
             setIngredients(ingredientsCopy);
         }
     };
-
-    //TODO: save flag image to recipe here?
 
     return (
         <div className="add-recipe-container">
