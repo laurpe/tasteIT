@@ -8,7 +8,6 @@ import axios from "axios";
 const Recipes = () => {
     const [recipes, setRecipes] = useState([]);
     const [search, setSearch] = useState("");
-    const [results, setResults] = useState([]);
 
     useEffect(() => {
         const getRecipes = async () => {
@@ -26,11 +25,15 @@ const Recipes = () => {
 
     const handleChange = (event) => {
         setSearch(event.target.value);
-        const results = recipes.filter((recipe) => {
-            return recipe.name.includes(search);
+    };
+
+    const filteredRecipes = () => {
+        if (search === "") {
+            return recipes;
+        }
+        return recipes.filter((recipe) => {
+            return recipe.name.toLowerCase().includes(search.toLowerCase());
         });
-        setResults(results);
-        console.log(results);
     };
 
     return (
@@ -38,15 +41,10 @@ const Recipes = () => {
             <Header />
             <div>
                 <label htmlFor="search">Search recipe by name</label>
-                <input
-                    type="text"
-                    name="search"
-                    value={search}
-                    onChange={handleChange}
-                />
+                <input type="text" name="search" onChange={handleChange} />
             </div>
             <div className="recipes">
-                {recipes.map((recipe) => {
+                {filteredRecipes().map((recipe) => {
                     return <Recipe key={recipe.id} recipe={recipe} />;
                 })}
             </div>

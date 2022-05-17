@@ -76,7 +76,7 @@ const AddRecipeForm = () => {
         setIngredients(ingredientsCopy);
     };
 
-    //TODO: save flag image do recipe here?
+    //TODO: save flag image to recipe here?
 
     return (
         <div className="add-recipe-container">
