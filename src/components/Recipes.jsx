@@ -39,9 +39,13 @@ const Recipes = () => {
     return (
         <>
             <Header />
-            <div>
-                <label htmlFor="search">Search recipe by name</label>
-                <input type="text" name="search" onChange={handleChange} />
+            <div className="searchbar">
+                <input
+                    type="text"
+                    name="search"
+                    onChange={handleChange}
+                    placeholder="Search recipe by name"
+                />
             </div>
             <div className="recipes">
                 {filteredRecipes().map((recipe) => {
