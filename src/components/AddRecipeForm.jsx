@@ -69,11 +69,12 @@ const AddRecipeForm = () => {
     };
 
     const handleRemoveClick = () => {
-        const ingredientsCopy = [...ingredients];
-        ingredientsCopy.pop();
-        //TODO: don't remove if only one field left
+        if (ingredients.length > 1) {
+            const ingredientsCopy = [...ingredients];
+            ingredientsCopy.pop();
 
-        setIngredients(ingredientsCopy);
+            setIngredients(ingredientsCopy);
+        }
     };
 
     //TODO: save flag image to recipe here?
